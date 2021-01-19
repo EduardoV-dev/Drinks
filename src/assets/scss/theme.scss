@@ -1,0 +1,12 @@
+$theme: (
+  primary: #F5F5F5,
+  primaryLighten: #F8F8F8,
+  secondary: #B0B0B0,
+  accent: #BB3B9C,
+  danger: #FF2727,
+  text: #333
+);
+
+@function color($color) {
+  @return map-get($theme, $color);
+}

@@ -1,0 +1,25 @@
+@import "../../../assets/scss/theme.scss";
+@import '../../../assets/scss/media.scss';
+
+.header {
+  background-color: color(primary);
+
+  &__link {
+    text-decoration: none;
+    min-height: 4.375rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    @include sm {
+      justify-content: flex-start;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    color: color(accent);
+  }
+}

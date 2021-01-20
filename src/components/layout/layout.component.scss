@@ -1,0 +1,18 @@
+@import "../../assets/scss/theme.scss";
+
+.content {
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    background-color: color(primary);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}

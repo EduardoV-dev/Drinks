@@ -8,7 +8,7 @@ interface Props {
 
 const Wrapper: React.FC<Props> = ({ children, className }) => {
   return (
-    <div className={`wrapper ${className}`}>
+    <div className={`wrapper${!className ? '' : ` ${className}`}`}>
       {children}
     </div>
   );

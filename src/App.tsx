@@ -1,14 +1,9 @@
 import React from 'react';
-import { Header, Hero } from './components/Drinks';
+import Layout from './components/layout';
 
 function App(): JSX.Element {
   return (
-    <>
-      <Header 
-        title='DrinksPlace'
-      />
-      <Hero />
-    </>
+    <Layout />
   );
 }
 

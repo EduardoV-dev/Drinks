@@ -2,7 +2,7 @@
 
 .hero {
   width: 100%;
-  background-color: color(primaryLighten);
+  background-color: color(primary);
   
   &__wrapper {
     min-height: 13.75rem;
@@ -17,5 +17,6 @@
 
   &__headline {
     line-height: 1.5;
+    text-align: center;
   }
 }

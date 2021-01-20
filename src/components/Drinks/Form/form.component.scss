@@ -1,0 +1,14 @@
+@import "../../../assets/scss/theme.scss";
+
+.form {
+  width: 100%;
+  padding: 3rem;
+  background-color: color(primaryLighten);
+  border: 1px solid color(secondary);
+  border-radius: 10px;
+  max-width: 29.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}

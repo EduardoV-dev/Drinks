@@ -1,0 +1,27 @@
+@import "../../../assets/scss/theme.scss";
+
+.select-container {
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 3.125rem;
+    height: 3.125rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: color(accent);
+    border-radius: 0 5px 5px 0;
+    pointer-events: none;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: 1rem;
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+}

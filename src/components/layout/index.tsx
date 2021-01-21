@@ -1,10 +1,10 @@
 import React from 'react';
-import { Header, Hero, Form, DrinksList, DrinkStatus } from '../Drinks';
-import { Wrapper, Grid } from '../ui';
+import { Header, Form, DrinksList, DrinkStatus, ScrollToTop } from '../Drinks';
+import { Wrapper, Grid, Hero } from '../ui';
 import styles from './layout.module.scss';
 
 interface Props {
-
+  
 }
 
 const Layout: React.FC<Props> = () => {
@@ -16,7 +16,7 @@ const Layout: React.FC<Props> = () => {
       <Hero />
       <main className={styles.content}>
         <Wrapper>
-          <Grid container gap='lg'>
+          <Grid container lg_gap='lg'>
             <Grid item xs={12} lg={6}>
               <Form />
               <DrinkStatus />
@@ -27,6 +27,7 @@ const Layout: React.FC<Props> = () => {
           </Grid>
         </Wrapper>
       </main>
+      <ScrollToTop />
     </>
   );
 }

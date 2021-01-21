@@ -1,0 +1,11 @@
+.img {
+  width: 100%;
+  object-fit: cover;
+
+  &_error {
+    display: block;
+    height: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}

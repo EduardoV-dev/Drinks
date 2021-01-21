@@ -14,7 +14,9 @@ interface Props {
   md?: Cols;
   lg?: Cols;
   xl?: Cols;
-  gap?: Gap
+  sm_gap?: Gap;
+  lg_gap?: Gap;
+  drinksList?: boolean;
 }
 
 const Grid: React.FC<Props> = ({
@@ -26,9 +28,10 @@ const Grid: React.FC<Props> = ({
   md,
   lg,
   xl,
-  gap
+  sm_gap,
+  lg_gap,
+  drinksList
 }) => {
-  console.log(gap);
   const classNames = cn({
     [styles.grid_container]: container,
     [styles.grid_item]: item,
@@ -37,7 +40,9 @@ const Grid: React.FC<Props> = ({
     [styles[`grid_md_${md}`]]: md,
     [styles[`grid_lg_${lg}`]]: lg,
     [styles[`grid_xl_${xl}`]]: xl,
-    [styles[`grid_gap_${gap}`]]: gap
+    [styles[`grid_sm_gap_${sm_gap}`]]: sm_gap,
+    [styles[`grid_lg_gap_${lg_gap}`]]: lg_gap,
+    [styles.grid_drinksList]: drinksList
   });
 
   return (

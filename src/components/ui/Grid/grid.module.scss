@@ -1,24 +1,36 @@
 @import "../../../assets/scss/media.scss";
+@import "../../../assets/scss/theme.scss";
 
 $spacing: (
-  "sm": 1rem,
+  "sm": 0.5rem,
   "md": 2rem,
-  "lg": 3rem
+  "lg": 3rem,
 );
 
 .grid {
   &_container {
     display: flex;
     flex-wrap: wrap;
+    min-height: 24rem;
   }
 
   &_item {
     display: block;
   }
 
-  @each $name, $value in $spacing {
-    &_gap_#{$name} > &_item {
-      padding: 0 $value;
+  @include breakpoint(sm) {
+    @each $name, $value in $spacing {
+      &_sm_gap_#{$name} > &_item {
+        padding: 0 $value;
+      }
+    }
+  }
+  
+  @include breakpoint(lg) {
+    @each $name, $value in $spacing {
+      &_lg_gap_#{$name} > &_item {
+        padding: 0 $value;
+      }
     }
   }
 
@@ -54,6 +66,21 @@ $spacing: (
       &_xl_#{$i} {
         flex-basis: ($i / 12) * 100%;
       }
+    }
+  }
+
+  &_drinksList {
+    background-color: color(primary);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid color(secondary);
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint(lg) {
+    &_lg_sticky {
+      position: sticky;
+      top: 0;
     }
   }
 }

@@ -26,6 +26,10 @@
     @include breakpoint(sm) {
       background-position: center center;
     }
+
+    @include breakpoint(lg) {
+      min-height: 18rem;
+    }
   }
 
   &_header {
@@ -34,20 +38,6 @@
       flex-flow: row wrap;
       justify-content: flex-start;
       align-items: center;
-    }
-  }
-
-  &_drinksList {
-    background-color: color(primary);
-    padding: 1rem;
-    border-radius: 10px;
-    border: 1px solid color(secondary);
-    margin-bottom: 2rem;
-
-    @include breakpoint(sm) {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
     }
   }
 }

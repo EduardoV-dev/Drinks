@@ -1,6 +1,6 @@
 import React from 'react';
-import Drink from '../Drink';
-import { Wrapper } from '../../ui';
+import Error from '../Error';
+import { Grid } from '../../ui';
 
 interface Props {
 
@@ -8,17 +8,60 @@ interface Props {
 
 const DrinksList: React.FC<Props> = () => {
   return (
-    <>
-      <Wrapper drinksList>
+    <Grid container drinksList sm_gap='sm' lg_gap='sm'>
+      {/* <Grid item xs={12} sm={6} lg={4}>
         <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
         <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
         <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
         <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
         <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
         <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
         <Drink />
-      </Wrapper>
-    </>
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid>
+      <Grid item xs={12} sm={6} lg={4}>
+        <Drink />
+      </Grid> */}
+      {/* <Error /> */}
+    </Grid>
   );
 }
 

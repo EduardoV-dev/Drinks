@@ -11,18 +11,6 @@
   position: relative;
   transition: all 0.3s ease;
 
-  @include breakpoint(sm) {
-    max-width: 16rem;
-  }
-
-  @include breakpoint(lg) {
-    max-width: 10.7rem;
-  }
-
-  @include breakpoint(xl) {
-    max-width: 9.5rem;
-  }
-
   &:hover {
     cursor: pointer;
     transform: scale(1.05);

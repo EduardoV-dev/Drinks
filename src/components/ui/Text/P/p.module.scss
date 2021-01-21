@@ -1,0 +1,31 @@
+@import "../../../../assets/scss/theme.scss";
+@import "../../../../assets/scss/media.scss";
+
+$display: (
+  "block": block,
+  "none": none,
+);
+
+.P {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2.5rem auto;
+
+  @each $name, $value in $display {
+    &_d_#{$value} {
+      display: $value;
+    }
+  }
+
+  @include breakpoint(md) {
+    @each $name, $value in $display {
+      &_d-md_#{$value} {
+        display: $value;
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    text-align: left;
+  }
+}

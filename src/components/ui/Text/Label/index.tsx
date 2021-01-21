@@ -1,5 +1,5 @@
 import React from 'react';
-import './label.component.scss';
+import styles from './label.module.scss';
 
 interface Props {
   children: string
@@ -7,7 +7,7 @@ interface Props {
 
 const Label: React.FC<Props> = (props) => {
   return (  
-    <label className="label" {...props} />
+    <label className={styles.label} {...props} />
   );
 }
 

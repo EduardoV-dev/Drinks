@@ -1,6 +1,6 @@
 @import "../../../assets/scss/theme.scss";
 
-.select-container {
+.select_container {
   width: 100%;
   position: relative;
 
@@ -24,4 +24,6 @@
   appearance: none;
   border: none;
   border-radius: 5px;
+  font-family: 'Raleway', 'Montserrat', sans-serif;
+  font-size: 1rem;
 }

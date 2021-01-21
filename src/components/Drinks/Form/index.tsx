@@ -1,6 +1,6 @@
 import React from 'react';
 import { Select, Label } from '../../ui';
-import './form.component.scss';
+import styles from './form.module.scss';
 
 interface Props {
 
@@ -8,7 +8,7 @@ interface Props {
 
 const Form: React.FC<Props> = () => {
   return (
-    <form className="form">
+    <form className={styles.form}>
       <Label>
         Select the category of your choice
       </Label>

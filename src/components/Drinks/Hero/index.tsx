@@ -1,17 +1,17 @@
 import React from 'react';
 import { Wrapper, Span } from '../../ui';
-import './hero.component.scss';
+import styles from './hero.module.scss';
 
 interface Props {
-
+  
 }
 
 const Hero: React.FC<Props> = () => {
   return (
-    <section className="hero">
-      <Wrapper className="hero__wrapper">
-        <h2 className="hero__headline">
-          Search for the <Span>Best Recipes</Span> by just filtering the recipes by the <Span>Category</Span> they belong.
+    <section className={styles.hero}>
+      <Wrapper hero>
+        <h2 className={styles.hero_headline}>
+          Search for the <Span>Best Recipes</Span> by just filtering them by the <Span>Category</Span> they belong.
         </h2>
       </Wrapper>
     </section>

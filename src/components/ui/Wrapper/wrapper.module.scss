@@ -1,0 +1,53 @@
+@import "../../../assets/scss/theme.scss";
+@import "../../../assets/scss/media.scss";
+
+.wrapper {
+  &_wrap {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @include breakpoint(xl) {
+      padding: 0;
+    }
+  }
+
+  &_hero {
+    min-height: 13.75rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../assets/svg/hero bg.svg");
+    background-position: top center;
+    background-size: 22rem;
+    background-repeat: no-repeat;
+
+    @include breakpoint(sm) {
+      background-position: center center;
+    }
+  }
+
+  &_header {
+    @include breakpoint(sm) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &_drinksList {
+    background-color: color(primary);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid color(secondary);
+    margin-bottom: 2rem;
+
+    @include breakpoint(sm) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  }
+}

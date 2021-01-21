@@ -1,0 +1,59 @@
+@import "../../../assets/scss/media.scss";
+
+$spacing: (
+  "sm": 1rem,
+  "md": 2rem,
+  "lg": 3rem
+);
+
+.grid {
+  &_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    display: block;
+  }
+
+  @each $name, $value in $spacing {
+    &_gap_#{$name} > &_item {
+      padding: 0 $value;
+    }
+  }
+
+  @for $i from 1 to 13 {
+    &_xs_#{$i} {
+      flex-basis: ($i / 12) * 100%;
+    }
+  }
+
+  @include breakpoint(sm) {
+    @for $i from 1 to 13 {
+      &_sm_#{$i} {
+        flex-basis: ($i / 12) * 100%;
+      }
+    }
+  }
+  @include breakpoint(md) {
+    @for $i from 1 to 13 {
+      &_md_#{$i} {
+        flex-basis: ($i / 12) * 100%;
+      }
+    }
+  }
+  @include breakpoint(lg) {
+    @for $i from 1 to 13 {
+      &_lg_#{$i} {
+        flex-basis: ($i / 12) * 100%;
+      }
+    }
+  }
+  @include breakpoint(xl) {
+    @for $i from 1 to 13 {
+      &_xl_#{$i} {
+        flex-basis: ($i / 12) * 100%;
+      }
+    }
+  }
+}

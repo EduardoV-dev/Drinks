@@ -1,4 +1,5 @@
 @import "../../../assets/scss/theme.scss";
+@import "../../../assets/scss/media.scss";
 
 .form {
   width: 100%;
@@ -6,9 +7,12 @@
   background-color: color(primaryLighten);
   border: 1px solid color(secondary);
   border-radius: 10px;
-  max-width: 29.5rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+
+  @include breakpoint(lg) {
+    max-width: 29.5rem;
+  }
 }

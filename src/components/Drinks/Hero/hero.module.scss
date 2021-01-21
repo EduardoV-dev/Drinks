@@ -1,0 +1,21 @@
+@import "../../../assets/scss/theme.scss";
+@import "../../../assets/scss/media.scss";
+
+.hero {
+  width: 100%;
+  background-color: color(primary);
+
+  &_headline {
+    line-height: 1.5;
+    text-align: center;
+
+    @include breakpoint(sm) {
+      max-width: 30rem;
+      text-align: left;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 2rem;
+    }
+  }
+}

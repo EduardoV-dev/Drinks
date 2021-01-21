@@ -1,5 +1,5 @@
 import React from 'react';
-import './span.component.scss';
+import styles from './span.module.scss';
 
 interface Props {
   children: string
@@ -7,7 +7,7 @@ interface Props {
 
 const Span: React.FC<Props> = (props) => {
   return (
-    <span className="highlight" {...props} />
+    <span className={styles.highlight} {...props} />
   );
 }
 

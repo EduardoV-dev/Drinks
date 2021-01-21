@@ -1,5 +1,5 @@
 import React from 'react';
-import './select.component.scss';
+import styles from './select.module.scss';
 
 interface Props {
 
@@ -7,8 +7,8 @@ interface Props {
 
 const Select: React.FC<Props> = () => {
   return (
-    <div className="select-container">
-      <select className="select">
+    <div className={styles.select_container}>
+      <select className={styles.select}>
         <option value="">Select a category</option>
       </select>
     </div>

@@ -1,25 +1,33 @@
 import React from 'react';
 import placeholder from '../../../assets/svg/placeholder.jpg';
 import styles from './drink.module.scss';
+import { P } from '../../ui';
+import {
+  IDrink
+} from '../../../models/drinks';
 
 interface Props {
-
+  drink: IDrink;
 }
 
-const Drink: React.FC<Props> = () => {
+const Drink: React.FC<Props> = ({
+  drink
+}) => {
+  const { strDrink, strDrinkThumb } = drink;
+
   return (
     <section className={styles.drink}>
       <figure className={styles.drink_figure}>
         <img
-          src={placeholder}
-          alt="Imagen"
+          src={strDrinkThumb}
+          alt=""
           className={styles.drink_img}
         />
       </figure>
       <div className={styles.drink_overlay}>
-        <p className={styles.drink_name}>
-          Margarita
-        </p>
+        <P light>
+          {strDrink}
+        </P>
       </div>
     </section>
   );

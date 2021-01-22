@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header, Form, DrinksList, DrinkStatus, ScrollToTop } from '../Drinks';
-import { Wrapper, Grid, Hero } from '../ui';
+import { Header, Form, DrinksList, DrinkStatus } from '../Drinks';
+import { Wrapper, Grid, Hero, ScrollToTop } from '../ui';
 import styles from './layout.module.scss';
 
 interface Props {
@@ -16,12 +16,12 @@ const Layout: React.FC<Props> = () => {
       <Hero />
       <main className={styles.content}>
         <Wrapper>
-          <Grid container lg_gap='lg'>
-            <Grid item xs={12} lg={6}>
+          <Grid container>
+            <Grid item xs={12} lg={5}>
               <Form />
               <DrinkStatus />
             </Grid>
-            <Grid item xs={12} lg={6}>
+            <Grid item xs={12} lg={5}>
               <DrinksList />
             </Grid>
           </Grid>

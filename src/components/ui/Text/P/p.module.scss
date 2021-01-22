@@ -34,4 +34,15 @@ $display: (
       margin-bottom: 0;
     }
   }
+
+  &_light {
+    font-weight: bold;
+    color: color(primaryLighten);
+    user-select: none;
+    padding: 0 1rem;
+
+    @include breakpoint(sm) {
+      font-size: 1rem;
+    }
+  }
 }

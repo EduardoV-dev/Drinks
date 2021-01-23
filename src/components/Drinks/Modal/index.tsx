@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import ModalIngredient from './ModalIngredient';
 import { P, Img, Span } from '../../ui';
 import { drinksContext } from '../../../hooks/context/drinks';
 import styles from './modal.module.scss';
@@ -10,7 +11,6 @@ interface Props {
 const Modal: React.FC<Props> = () => {
   const { drinkInfo, hideModal } = useContext(drinksContext);
   if (!drinkInfo) return null;
-  console.log(drinkInfo);
 
   const { strDrink, strInstructions, strDrinkThumb } = drinkInfo;
 
@@ -34,23 +34,9 @@ const Modal: React.FC<Props> = () => {
           />
           <div className={styles.modal_ingredients}>
             <P modal>Ingredients</P>
-            <ul>
-              <li className={styles.modal_li}>
-                <Span modal_ingredient>Tequila · 1 1/2 oz</Span>
-              </li>
-              <li className={styles.modal_li}>
-                <Span modal_ingredient>Tequila · 1 1/2 oz</Span>
-              </li>
-              <li className={styles.modal_li}>
-                <Span modal_ingredient>Tequila · 1 1/2 oz</Span>
-              </li>
-              <li className={styles.modal_li}>
-                <Span modal_ingredient>Tequila · 1 1/2 oz</Span>
-              </li>
-              <li className={styles.modal_li}>
-                <Span modal_ingredient>Tequila · 1 1/2 oz</Span>
-              </li>
-            </ul>
+            <ModalIngredient 
+              drinkInfo={drinkInfo}
+            />
           </div>
           <div className={styles.modal_instructions}>
             <P modal>Instructions</P>

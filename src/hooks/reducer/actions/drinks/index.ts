@@ -5,7 +5,6 @@ import {
   SAVE_CATEGORIES,
   SET_SELECTED_CATEGORY,
   SAVE_DRINKS,
-  ERROR,
   SET_DRINK_ID,
   SAVE_DRINK_INFO,
   DISPLAY_MODAL
@@ -24,10 +23,6 @@ export const setSelectedCategoryAction = (category: string): IAction => ({
 export const saveDrinksAction = (drinks: []): IAction => ({
   type: SAVE_DRINKS,
   payload: drinks
-});
-
-export const handleErrorAction = (): IAction => ({
-  type: ERROR
 });
 
 export const saveDrinkIdAction = (drinkId: number): IAction => ({

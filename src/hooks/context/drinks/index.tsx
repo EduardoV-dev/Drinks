@@ -51,7 +51,7 @@ const DrinksProvider: React.FC<Props> = ({
   } = state;
 
   const handleCategories = pipe(
-    fetchCategories(dispatch),
+    fetchCategories,
     saveCategories(dispatch)
   );
 
@@ -59,7 +59,7 @@ const DrinksProvider: React.FC<Props> = ({
     setSelectedCategory(dispatch, target.value);
 
   const handleDrinksByCategory = pipe(
-    searchByCategory(dispatch),
+    searchByCategory,
     saveDrinksByCategory(dispatch)
   );
 
@@ -69,7 +69,7 @@ const DrinksProvider: React.FC<Props> = ({
   );
 
   const handleSearchDrinkInfo = pipe(
-    searchDrinkInfo(dispatch),
+    searchDrinkInfo,
     saveDrinkInfo(dispatch)
   );
 

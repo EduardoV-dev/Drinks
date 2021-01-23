@@ -36,7 +36,8 @@
   }
 
   &_backdrop {
-    position: absolute;
+    position: fixed;
+    z-index: 5;
     top: 0;
     left: 0;
     background-color: rgba(#000, 0.5);
@@ -54,15 +55,5 @@
   &_ingredients,
   &_instructions {
     padding: 0 1rem;
-  }
-
-  &_li {
-    color: color(accent);
-    margin-left: 1rem;
-    margin-bottom: 0.5rem;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 }

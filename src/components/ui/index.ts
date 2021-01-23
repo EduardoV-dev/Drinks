@@ -7,3 +7,4 @@ export { default as P } from './Text/P';
 export { default as Grid } from './Grid';
 export { default as Img } from './Image/Img';
 export { default as ScrollToTop } from './ScrollToTop';
+export { default as Li } from './Li';

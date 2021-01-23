@@ -1,0 +1,11 @@
+@import '../../../assets/scss/theme.scss';
+
+.li {
+  color: color(accent);
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

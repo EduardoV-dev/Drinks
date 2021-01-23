@@ -20,6 +20,8 @@ const Select: React.FC<Props> = () => {
   // eslint-disable-next-line
   useEffect(() => handleCategories(), []);
 
+  console.log(categories);
+
   return (
     <div className={styles.select_container}>
       <select className={styles.select}

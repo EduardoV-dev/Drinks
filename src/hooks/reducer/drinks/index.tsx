@@ -6,7 +6,6 @@ import {
   SAVE_CATEGORIES,
   SET_SELECTED_CATEGORY,
   SAVE_DRINKS,
-  ERROR,
   SET_DRINK_ID,
   SAVE_DRINK_INFO,
   DISPLAY_MODAL
@@ -30,11 +29,6 @@ const drinksReducer = (state: IState, action: IAction): IState => {
         ...state,
         drinks: action.payload,
         error: false
-      }
-    case ERROR: 
-      return {
-        ...state,
-        error: true
       }
     case SET_DRINK_ID:
       return {

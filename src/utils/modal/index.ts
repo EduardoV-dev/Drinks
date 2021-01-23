@@ -17,14 +17,14 @@ export const showModal = (dispatch: React.Dispatch<IAction>) => async (value: bo
   setOverflow(await value);
 }
 
-export const getIngredients = (drinkInfo: any) => {
-  let ingredients: JSX.Element[] = [];
+export const getIngredients = (drinkInfo: any): string[] => {
+  const ingredients: string[] = [];
+
   for(let i: number = 1; i <= 15; i++) {
     if (drinkInfo[`strIngredient${i}`]) {
-      ingredients.push(
-        
-      );
+      ingredients.push(`${drinkInfo[`strIngredient${i}`]} · ${drinkInfo[`strMeasure${i}`]}`);
     }
   }
+
   return ingredients;
 }

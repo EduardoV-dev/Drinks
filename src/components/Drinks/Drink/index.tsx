@@ -1,10 +1,8 @@
-import React from 'react';
-import placeholder from '../../../assets/svg/placeholder.jpg';
+import React, { useContext } from 'react';
 import styles from './drink.module.scss';
-import { P } from '../../ui';
-import {
-  IDrink
-} from '../../../models/drinks';
+import { P, Img } from '../../ui';
+import { IDrink } from '../../../models/drinks';
+import { drinksContext } from '../../../hooks/context/drinks';
 
 interface Props {
   drink: IDrink;
@@ -13,15 +11,18 @@ interface Props {
 const Drink: React.FC<Props> = ({
   drink
 }) => {
-  const { strDrink, strDrinkThumb } = drink;
+  const { handleDrinkId } = useContext(drinksContext);
+  const { idDrink, strDrink, strDrinkThumb } = drink;
 
   return (
-    <section className={styles.drink}>
+    <section className={styles.drink}
+      onClick={() => handleDrinkId(idDrink)}
+    >
       <figure className={styles.drink_figure}>
-        <img
+        <Img
           src={strDrinkThumb}
           alt=""
-          className={styles.drink_img}
+          drink
         />
       </figure>
       <div className={styles.drink_overlay}>

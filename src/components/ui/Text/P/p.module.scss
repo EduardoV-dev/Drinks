@@ -29,10 +29,6 @@ $display: (
     text-align: left;
     margin: 0;
     margin-bottom: 1.5rem;
-
-    &:last-of-type {  
-      margin-bottom: 0;
-    }
   }
 
   &_light {
@@ -44,5 +40,22 @@ $display: (
     @include breakpoint(sm) {
       font-size: 1rem;
     }
+  }
+
+  &_modal {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 1rem 0;
+
+    @include breakpoint(lg) {
+      text-align: left;
+      margin: 1rem 0;
+    }
+  }
+
+  &_modal_instructions {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }

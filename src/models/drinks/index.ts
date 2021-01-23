@@ -2,6 +2,10 @@ export interface IState {
   categories: [];
   selectedCategory: string;
   drinks: [];
+  error: boolean
+  drinkId: number | null;
+  drinkInfo: [] | null;
+  modalState: boolean;
 }
 
 export interface IAction {

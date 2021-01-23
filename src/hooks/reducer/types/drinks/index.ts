@@ -1,3 +1,7 @@
 export const SAVE_CATEGORIES = 'SAVE_CATEGORIES';
 export const SET_SELECTED_CATEGORY = 'SET_SELECTED_CATEGORY';
 export const SAVE_DRINKS = 'SAVE_DRINKS';
+export const ERROR = 'ERROR';
+export const SET_DRINK_ID = 'SET_DRINK_ID';
+export const SAVE_DRINK_INFO = 'SAVE_DRINK_INFO';
+export const DISPLAY_MODAL = 'DISPLAY_MODAL';

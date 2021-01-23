@@ -1,13 +1,24 @@
-import React from 'react';
-import { Header, Form, DrinksList, DrinkStatus } from '../Drinks';
+import React, { useContext, useEffect } from 'react';
+import { Header, Form, DrinksList, DrinkStatus, Modal } from '../Drinks';
 import { Wrapper, Grid, Hero, ScrollToTop } from '../ui';
+import { drinksContext } from '../../hooks/context/drinks';
 import styles from './layout.module.scss';
 
 interface Props {
-  
+
 }
 
 const Layout: React.FC<Props> = () => {
+  const {
+    drinkId,
+    handleSearchDrinkInfo,
+    modalState
+  } = useContext(drinksContext);
+  // eslint-disable-next-line
+  useEffect(() => handleSearchDrinkInfo(drinkId), [drinkId]);
+
+  const modalComponent = modalState ? <Modal /> : null;
+
   return (
     <>
       <Header
@@ -28,6 +39,7 @@ const Layout: React.FC<Props> = () => {
         </Wrapper>
       </main>
       <ScrollToTop />
+      {modalComponent}
     </>
   );
 }

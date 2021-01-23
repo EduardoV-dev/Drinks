@@ -8,4 +8,15 @@
     max-width: 350px;
     margin: 0 auto;
   }
+
+  &_drink {
+    height: auto;
+    min-height: 200px;
+    border-radius: 10px;
+  }
+
+  &_modal {
+    max-height: 18.75rem;
+    border-radius: 5px;
+  }
 }

@@ -12,6 +12,8 @@ const DrinkStatus: React.FC<Props> = () => {
     selectedCategory
   } = useContext(drinksContext);
 
+  if (drinks.length === 0) return null;
+
   return (
     <>
       <P>

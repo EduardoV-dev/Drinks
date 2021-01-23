@@ -17,14 +17,6 @@
     border: none;
   }
 
-  &_img {
-    width: 100%;
-    height: auto;
-    min-height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-
   &_overlay {
     position: absolute;
     z-index: 1;

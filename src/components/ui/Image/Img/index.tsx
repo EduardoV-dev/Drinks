@@ -6,15 +6,21 @@ interface Props {
   src: string;
   alt?: string;
   error?: boolean;
+  drink?: boolean;
+  modal?: boolean;
 }
 
 const Img: React.FC<Props> = ({
   src,
   alt,
-  error
+  error,
+  drink,
+  modal
 }) => {
   const classNames = cn(styles.img, {
-    [styles.img_error]: error
+    [styles.img_error]: error,
+    [styles.img_drink]: drink,
+    [styles.img_modal]: modal
   });
 
   return (  

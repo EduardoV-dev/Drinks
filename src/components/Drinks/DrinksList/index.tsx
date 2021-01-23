@@ -17,24 +17,27 @@ const DrinksList: React.FC<Props> = () => {
   const {
     selectedCategory,
     drinks,
+    error,
     handleDrinksByCategory
   } = useContext(drinksContext);
   // eslint-disable-next-line
   useEffect(() => handleDrinksByCategory(selectedCategory), [selectedCategory]);
+  
+  if (error) return <Error />;
 
   return (
     <Grid container drinksList sm_gap='sm'>
       { drinks.length === 0 ? null : (
         drinks.map((drink: IDrink) => (
-          <Grid item xs={12} sm={6} lg={4}>
+          <Grid item xs={12} sm={6} lg={4}
+            key={drink.idDrink}
+          >
             <Drink
-              key={drink.idDrink}
               drink={drink}
             />
           </Grid>
         ))
       )}
-      {/* <Error /> */}
     </Grid>
   );
 }

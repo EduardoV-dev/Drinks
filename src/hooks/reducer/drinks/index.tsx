@@ -5,7 +5,11 @@ import {
 import {
   SAVE_CATEGORIES,
   SET_SELECTED_CATEGORY,
-  SAVE_DRINKS
+  SAVE_DRINKS,
+  ERROR,
+  SET_DRINK_ID,
+  SAVE_DRINK_INFO,
+  DISPLAY_MODAL
 } from '../types/drinks';
 
 const drinksReducer = (state: IState, action: IAction): IState => {
@@ -13,7 +17,8 @@ const drinksReducer = (state: IState, action: IAction): IState => {
     case SAVE_CATEGORIES: 
       return {
         ...state,
-        categories: action.payload
+        categories: action.payload,
+        error: false
       }
     case SET_SELECTED_CATEGORY: 
       return {
@@ -23,7 +28,29 @@ const drinksReducer = (state: IState, action: IAction): IState => {
     case SAVE_DRINKS: 
       return {
         ...state,
-        drinks: action.payload
+        drinks: action.payload,
+        error: false
+      }
+    case ERROR: 
+      return {
+        ...state,
+        error: true
+      }
+    case SET_DRINK_ID:
+      return {
+        ...state,
+        drinkId: action.payload
+      }
+    case SAVE_DRINK_INFO:
+      return {
+        ...state,
+        drinkInfo: action.payload,
+        error: false
+      }
+    case DISPLAY_MODAL: 
+      return {
+        ...state,
+        modalState: action.payload
       }
     default: 
       return state;

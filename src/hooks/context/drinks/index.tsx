@@ -8,8 +8,14 @@ import {
   saveCategories,
   searchByCategory,
   setSelectedCategory,
-  saveDrinksByCategory
+  saveDrinksByCategory,
+  saveDrinkID,
+  searchDrinkInfo,
+  saveDrinkInfo
 } from '../../../utils/drinks';
+import {
+  showModal
+} from '../../../utils/modal';
 import {
   pipe
 } from '../../../utils/common';
@@ -27,14 +33,25 @@ const DrinksProvider: React.FC<Props> = ({
     categories: [],
     selectedCategory: 'Ordinary Drink',
     drinks: [],
+    error: false,
+    drinkId: null,
+    drinkInfo: null,
+    modalState: false
   }
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const { categories, selectedCategory, drinks } = state;
+  const {
+    categories,
+    selectedCategory,
+    drinks,
+    drinkId,
+    drinkInfo,
+    modalState
+  } = state;
 
   const handleCategories = pipe(
-    fetchCategories,
+    fetchCategories(dispatch),
     saveCategories(dispatch)
   );
 
@@ -42,9 +59,24 @@ const DrinksProvider: React.FC<Props> = ({
     setSelectedCategory(dispatch, target.value);
 
   const handleDrinksByCategory = pipe(
-    searchByCategory,
+    searchByCategory(dispatch),
     saveDrinksByCategory(dispatch)
   );
+
+  const handleDrinkId = pipe(
+    saveDrinkID(dispatch),
+    showModal(dispatch)
+  );
+
+  const handleSearchDrinkInfo = pipe(
+    searchDrinkInfo(dispatch),
+    saveDrinkInfo(dispatch)
+  );
+
+  const hideModal = () => {
+    showModal(dispatch)(false);
+    saveDrinkInfo(dispatch)(null);
+  }
 
   return (
     <drinksContext.Provider
@@ -52,9 +84,15 @@ const DrinksProvider: React.FC<Props> = ({
         categories,
         selectedCategory,
         drinks,
+        drinkId,
+        drinkInfo,
+        modalState,
         handleCategories,
         handleSelectCategory,
-        handleDrinksByCategory
+        handleDrinksByCategory,
+        handleDrinkId,
+        handleSearchDrinkInfo,
+        hideModal
       }}
     >
       {children}

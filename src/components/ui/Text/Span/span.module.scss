@@ -3,4 +3,17 @@
 .highlight {
   color: color(accent);
   font-weight: bold;
+
+  &_modal {
+    font-size: 2rem;
+    color: color(text);
+    cursor: pointer;
+    font-weight: regular;
+  }
+
+  &_modal_ingredient {
+    font-size: 1rem;
+    color: color(text);
+    font-weight: regular;
+  }
 }
